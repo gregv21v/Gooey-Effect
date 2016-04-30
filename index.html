@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Gooey Effect
+	</title>
+
+
+
+	<script src="lib/jquery-1.11.3.min.js"></script>
+	<script src="lib/svg.min.js" charset="utf-8"></script>
+	<script src="lib/util.js" charset="utf-8"></script>
+
+	<script src="classes/Connection.js" charset="utf-8"></script>
+	<script src="classes/Part.js" charset="utf-8"></script>
+	<script src="classes/World.js" charset="utf-8"></script>
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+	<div id="drawing">
+	</div>
+
+	<script type="text/javascript">
+		var drawing = SVG('drawing').size("100%", "1000");
+		var world = new World();
+
+		var part1 = new Part(world, drawing, {x: 0, y: 0});
+		var part2 = new Part(world, drawing, {x: 100, y: 0});
+
+		world.addPart(part1);
+		world.addPart(part2);
+
+		part1.connect(drawing, part2, "right");
+		
+
+
+
+
+
+	</script>
+</body>
+
+
+</html>
